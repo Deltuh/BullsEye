@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // All my variables
     var currentValue: Int = 0
     var targetValue = 0
     var score = 0
@@ -17,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var roundLabel: UILabel!
     
-    
+    // Function for starting a new round
     func startNewRound() {
         round += 1
         targetValue = Int.random(in: 1...100)
