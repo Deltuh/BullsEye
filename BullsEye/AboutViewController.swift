@@ -9,8 +9,11 @@ import UIKit
 import WebKit
 
 class AboutViewController: UIViewController {
+   
+    // Made an outlet for the HTML popup to view the games information
     @IBOutlet var webView: WKWebView!
     
+    // Made an outlet for the close function for the information page | has an animation
     @IBAction func close(){
         dismiss(animated: true, completion: nil)
     }
@@ -24,18 +27,4 @@ class AboutViewController: UIViewController {
                 webView.load(request)
             }
     }
-      
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

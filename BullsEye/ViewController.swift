@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     // All my variables
     var currentValue: Int = 0
     var targetValue = 0
@@ -69,6 +70,7 @@ class ViewController: UIViewController {
         round = 0
         startNewRound()
         
+        // Subtle animation when the Start Over Button is pressed
         let transition = CATransition()
         transition.type = CATransitionType.fade
         transition.duration = 1
@@ -79,11 +81,11 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         
-        //Calculating the differnece
+        // Calculating the differnece
         let difference = abs(targetValue - currentValue)
         var points = 100 - difference
         
-        //Giving the player some sort of feedback when scoring
+        // Giving the player some sort of feedback when scoring
         let title: String
         if difference == 0 {
             title = "Perfect!"
